@@ -4,7 +4,7 @@ function Projects(props) {
 
     const [projects, setProjects] = useState(null)
 
-    const getProjectsData = async () {
+    const getProjectsData = async () => {
         const response = await fetch(props.URL + 'projects')
         const data = await response.json()
         setProjects(data)
